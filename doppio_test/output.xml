@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.8.8 on win32)" generated="2025-10-01T20:21:17.590592" rpa="false" schemaversion="5">
+<suite id="s1" name="Checkout Mug" source="C:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\tests\checkout_mug.robot">
+<test id="s1-t1" name="Test Case - 1" line="17">
+<kw name="Open app" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:17.961090" level="INFO">Opening browser 'chrome' to base url 'https://training-platform2.doppio-tech.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-01T20:21:17.961090" elapsed="1.631009"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-01T20:21:19.592099" elapsed="0.036902"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=nav-search-input</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:19.629001" elapsed="0.008975"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:17.960069" elapsed="1.677907"/>
+</kw>
+<kw name="Sign in" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:19.640968" level="INFO">Clicking element 'css=[data-testid="nav-account-button"]'.</msg>
+<arg>${USER_MENU_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:19.638973" elapsed="0.154970"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SIGN_IN_LINK}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:19.793943" elapsed="0.020943"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:19.815884" level="INFO">Clicking element 'css=[data-testid="nav-account-signin"]'.</msg>
+<arg>${SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:19.814886" elapsed="0.064827"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:19.879713" elapsed="0.006982"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:19.887692" level="INFO">Typing text 'tellstoryneo@gmail.com' into text field 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="signin-email"]')'.</msg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:19.886695" elapsed="0.213694"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:20.101386" level="INFO">Typing text 'Tempdoppio123' into text field 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="signin-password"]')'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:20.100389" elapsed="0.059093"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:20.159482" level="INFO">Clicking element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="signin-submit"]')'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:20.159482" elapsed="0.038896"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${TOAST_SUCCESS_MESSAGE}</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:20.199376" elapsed="0.366673"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:19.638973" elapsed="0.927076"/>
+</kw>
+<kw name="Search the keyword" owner="home_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:20.568044" level="INFO">Clicking element 'css=[data-testid="nav-search-input"]'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:20.568044" elapsed="0.056847"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:20.625888" level="INFO">Typing text 'mug' into text field 'css=[data-testid="nav-search-input"]'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:20.624891" elapsed="0.054367"/>
+</kw>
+<arg>mug</arg>
+<status status="PASS" start="2025-10-01T20:21:20.567046" elapsed="0.112212"/>
+</kw>
+<kw name="Select the autocomplete product" owner="home_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${AUTO_SUGGEST_ITEM}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:20.680255" elapsed="0.316370"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:20.997622" level="INFO">Clicking element 'css=[data-testid="nav-search-suggest"]'.</msg>
+<arg>${AUTO_SUGGEST_ITEM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:20.997622" elapsed="0.065299"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:20.680255" elapsed="0.382666"/>
+</kw>
+<kw name="Select color gray" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${COLOR_OPTION_GRAY}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.063918" elapsed="0.231363"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:21.295281" level="INFO">Clicking element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-opt-color-Gray"]')'.</msg>
+<arg>${COLOR_OPTION_GRAY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.295281" elapsed="0.042471"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:21.063918" elapsed="0.273834"/>
+</kw>
+<kw name="Select quantity" owner="product_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${QTY_INPUT_BOX}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.338749" elapsed="0.008736"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:21.348482" level="INFO">Clicking element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-qty-input"]')'.</msg>
+<arg>${QTY_INPUT_BOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.347485" elapsed="0.044809"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:21.393292" level="INFO">Sending key(s) ('CTRL+a',) to dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-qty-input"]') element.</msg>
+<msg time="2025-10-01T20:21:21.663986" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-10-01T20:21:21.663986" level="INFO">Sending key a</msg>
+<msg time="2025-10-01T20:21:21.663986" level="INFO">Releasing special key CONTROL.</msg>
+<arg>${QTY_INPUT_BOX}</arg>
+<arg>CTRL+a</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.392294" elapsed="0.276678"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:21.669970" level="INFO">Typing text '3' into text field 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-qty-input"]')'.</msg>
+<arg>${QTY_INPUT_BOX}</arg>
+<arg>${qty}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.669970" elapsed="0.047438"/>
+</kw>
+<arg>3</arg>
+<status status="PASS" start="2025-10-01T20:21:21.337752" elapsed="0.380653"/>
+</kw>
+<kw name="Open cart" owner="cart_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:21.719403" level="INFO">Clicking element 'css=[data-testid="nav-cart"]'.</msg>
+<arg>${CART_ICON_NAV}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.719403" elapsed="0.059847"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PROCEED_BTN}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:21.780240" elapsed="0.447712"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:21.718405" elapsed="0.509547"/>
+</kw>
+<kw name="Tick all product checkboxes" owner="cart_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:22.231943" level="INFO">Clicking element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div0-label0-input0"]')'.</msg>
+<arg>${SELECT_ALL_CHECKBOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.230982" elapsed="0.064001"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PROCEED_BTN}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.294983" elapsed="0.004986"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:22.229948" elapsed="0.070021"/>
+</kw>
+<kw name="Read cart page price panel" owner="cart_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SUBTOTAL_TXT}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.300966" elapsed="0.002992"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Text Should Not Be" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:22.304955" level="INFO">Verifying element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div1-span1"]')' does not contain exact text 'THB 0.00'.</msg>
+<arg>${SUBTOTAL_TXT}</arg>
+<arg>THB 0.00</arg>
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.304955" elapsed="0.014960"/>
+</kw>
+<arg>5s</arg>
+<arg>500ms</arg>
+<arg>Element Text Should Not Be</arg>
+<arg>${SUBTOTAL_TXT}</arg>
+<arg>THB 0.00</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.304955" elapsed="0.014960"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:22.331884" level="INFO">${subtotal_txt} = THB 255.00</msg>
+<var>${subtotal_txt}</var>
+<arg>${SUBTOTAL_TXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.319915" elapsed="0.011969"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:22.342854" level="INFO">${shipping_txt} = THB 50.00</msg>
+<var>${shipping_txt}</var>
+<arg>${SHIPPING_TXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.331884" elapsed="0.010970"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:22.353824" level="INFO">${vat_txt} = THB 18.00</msg>
+<var>${vat_txt}</var>
+<arg>${VAT_TXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.342854" elapsed="0.010970"/>
+</kw>
+<kw name="THB Text To Number" owner="utils">
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:22.355819" level="INFO">${clean} =  255.00</msg>
+<var>${clean}</var>
+<arg>${text}</arg>
+<arg>THB</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.354822" elapsed="0.000997"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:22.356817" level="INFO">${clean} =  255.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<arg>,</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.355819" elapsed="0.000998"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-10-01T20:21:22.356817" level="INFO">${clean} = 255.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.356817" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-10-01T20:21:22.357815" level="INFO">${number} = 255.0</msg>
+<var>${number}</var>
+<arg>${clean}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.357815" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${number}</value>
+<status status="PASS" start="2025-10-01T20:21:22.357815" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-01T20:21:22.357815" level="INFO">${subtotal} = 255.0</msg>
+<var>${subtotal}</var>
+<arg>${subtotal_txt}</arg>
+<status status="PASS" start="2025-10-01T20:21:22.353824" elapsed="0.003991"/>
+</kw>
+<kw name="THB Text To Number" owner="utils">
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:22.359837" level="INFO">${clean} =  50.00</msg>
+<var>${clean}</var>
+<arg>${text}</arg>
+<arg>THB</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.358812" elapsed="0.001025"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:22.360834" level="INFO">${clean} =  50.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<arg>,</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.359837" elapsed="0.000997"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-10-01T20:21:22.360834" level="INFO">${clean} = 50.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.360834" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-10-01T20:21:22.360834" level="INFO">${number} = 50.0</msg>
+<var>${number}</var>
+<arg>${clean}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.360834" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${number}</value>
+<status status="PASS" start="2025-10-01T20:21:22.361831" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-01T20:21:22.361831" level="INFO">${shipping} = 50.0</msg>
+<var>${shipping}</var>
+<arg>${shipping_txt}</arg>
+<status status="PASS" start="2025-10-01T20:21:22.358812" elapsed="0.003019"/>
+</kw>
+<kw name="THB Text To Number" owner="utils">
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:22.362828" level="INFO">${clean} =  18.00</msg>
+<var>${clean}</var>
+<arg>${text}</arg>
+<arg>THB</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.361831" elapsed="0.000997"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:22.363829" level="INFO">${clean} =  18.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<arg>,</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.363829" elapsed="0.000000"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-10-01T20:21:22.364825" level="INFO">${clean} = 18.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.363829" elapsed="0.000996"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-10-01T20:21:22.364825" level="INFO">${number} = 18.0</msg>
+<var>${number}</var>
+<arg>${clean}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.364825" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${number}</value>
+<status status="PASS" start="2025-10-01T20:21:22.364825" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-01T20:21:22.365792" level="INFO">${vat} = 18.0</msg>
+<var>${vat}</var>
+<arg>${vat_txt}</arg>
+<status status="PASS" start="2025-10-01T20:21:22.361831" elapsed="0.003961"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.365792" elapsed="0.000999"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Get value from cart</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.366791" elapsed="0.000997"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>1 - Subtotal is number: ${subtotal}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.367788" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>2 - shipping is number: ${shipping}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.367788" elapsed="0.000997"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>3 - vat is number: ${vat}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.368785" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${subtotal}</value>
+<value>${shipping}</value>
+<value>${vat}</value>
+<status status="PASS" start="2025-10-01T20:21:22.368785" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-01T20:21:22.369782" level="INFO">${subtotal} = 255.0</msg>
+<msg time="2025-10-01T20:21:22.369782" level="INFO">${shipping} = 50.0</msg>
+<msg time="2025-10-01T20:21:22.369782" level="INFO">${vat} = 18.0</msg>
+<var>${subtotal}</var>
+<var>${shipping}</var>
+<var>${vat}</var>
+<status status="PASS" start="2025-10-01T20:21:22.299969" elapsed="0.069813"/>
+</kw>
+<kw name="Proceed to checkout" owner="cart_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:22.370779" level="INFO">Clicking element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="cart-proceed"]')'.</msg>
+<arg>${PROCEED_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.370779" elapsed="0.058985"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PLACE_ORDER_BTN}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.430760" elapsed="0.004986"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:22.369782" elapsed="0.065964"/>
+</kw>
+<kw name="Read checkout page price panel" owner="checkout_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TOTAL_TXT}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.436743" elapsed="0.004987"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Text Should Not Be" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:22.443725" level="INFO">Verifying element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="checkout-total"]')' does not contain exact text 'THB 0.00'.</msg>
+<msg time="2025-10-01T20:21:22.753327" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-339.png"&gt;&lt;img src="selenium-screenshot-339.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-01T20:21:22.753855" level="FAIL">The text of element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="checkout-total"]')' was not supposed to be 'THB 0.00'.</msg>
+<arg>${TOTAL_TXT}</arg>
+<arg>THB 0.00</arg>
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<status status="FAIL" start="2025-10-01T20:21:22.442728" elapsed="0.312123">The text of element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="checkout-total"]')' was not supposed to be 'THB 0.00'.</status>
+</kw>
+<kw name="Element Text Should Not Be" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:23.270511" level="INFO">Verifying element 'dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="checkout-total"]')' does not contain exact text 'THB 0.00'.</msg>
+<arg>${TOTAL_TXT}</arg>
+<arg>THB 0.00</arg>
+<doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.270511" elapsed="0.010920"/>
+</kw>
+<arg>5s</arg>
+<arg>500ms</arg>
+<arg>Element Text Should Not Be</arg>
+<arg>${TOTAL_TXT}</arg>
+<arg>THB 0.00</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-10-01T20:21:22.442728" elapsed="0.838703"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:23.291166" level="INFO">${total_txt} = THB 323.00</msg>
+<var>${total_txt}</var>
+<arg>${TOTAL_TXT}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.281431" elapsed="0.009735"/>
+</kw>
+<kw name="THB Text To Number" owner="utils">
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:23.293188" level="INFO">${clean} =  323.00</msg>
+<var>${clean}</var>
+<arg>${text}</arg>
+<arg>THB</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.292191" elapsed="0.000997"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-10-01T20:21:23.294160" level="INFO">${clean} =  323.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<arg>,</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.293188" elapsed="0.000972"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2025-10-01T20:21:23.294160" level="INFO">${clean} = 323.00</msg>
+<var>${clean}</var>
+<arg>${clean}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.294160" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-10-01T20:21:23.294160" level="INFO">${number} = 323.0</msg>
+<var>${number}</var>
+<arg>${clean}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.294160" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${number}</value>
+<status status="PASS" start="2025-10-01T20:21:23.295184" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-01T20:21:23.295184" level="INFO">${total} = 323.0</msg>
+<var>${total}</var>
+<arg>${total_txt}</arg>
+<status status="PASS" start="2025-10-01T20:21:23.291166" elapsed="0.004018"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.295184" elapsed="0.000970"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Get value from cart page price panel</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.296154" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>4 - Subtotal is number: ${total}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.296154" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${total}</value>
+<status status="PASS" start="2025-10-01T20:21:23.297152" elapsed="0.000000"/>
+</return>
+<msg time="2025-10-01T20:21:23.297152" level="INFO">${total} = 323.0</msg>
+<var>${total}</var>
+<status status="PASS" start="2025-10-01T20:21:22.436743" elapsed="0.860409"/>
+</kw>
+<kw name="Validate total" owner="utils">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-01T20:21:23.299171" level="INFO">${expected_total} = 323.0</msg>
+<var>${expected_total}</var>
+<arg>${subtotal} + ${shipping} + ${vat}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.298150" elapsed="0.001021"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${expected_total}</arg>
+<arg>${total}</arg>
+<arg>msg=❌ Total price mismatch</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.299171" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Price calculation matches: ${subtotal} + ${shipping} + ${vat} = ${total}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.300144" elapsed="0.000000"/>
+</kw>
+<arg>${total}</arg>
+<arg>${shipping}</arg>
+<arg>${vat}</arg>
+<arg>${subtotal}</arg>
+<status status="PASS" start="2025-10-01T20:21:23.298150" elapsed="0.001994"/>
+</kw>
+<kw name="Close app" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-01T20:21:23.301141" elapsed="2.183035"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:23.301141" elapsed="2.183035"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:17.959067" elapsed="7.526091"/>
+</test>
+<test id="s1-t2" name="Test Case - 2" line="40">
+<kw name="Open app" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-01T20:21:25.491107" level="INFO">Opening browser 'chrome' to base url 'https://training-platform2.doppio-tech.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-01T20:21:25.490112" elapsed="1.705749"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-01T20:21:27.195861" elapsed="0.032912"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=nav-search-input</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-01T20:21:27.228773" elapsed="0.008975"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:25.489150" elapsed="1.748598"/>
+</kw>
+<kw name="Skip" owner="BuiltIn">
+<msg time="2025-10-01T20:21:27.238746" level="SKIP">Skipped for now</msg>
+<arg>Skipped for now</arg>
+<doc>Skips the rest of the current test.</doc>
+<status status="SKIP" start="2025-10-01T20:21:27.237748" elapsed="0.000998">Skipped for now</status>
+</kw>
+<kw name="Sign in" owner="login_page">
+<status status="NOT RUN" start="2025-10-01T20:21:27.238746" elapsed="0.000000"/>
+</kw>
+<kw name="Search the keyword" owner="home_page">
+<arg>Ceramic Mug</arg>
+<status status="NOT RUN" start="2025-10-01T20:21:27.238746" elapsed="0.000000"/>
+</kw>
+<kw name="Click search button" owner="home_page">
+<status status="NOT RUN" start="2025-10-01T20:21:27.239743" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-01T20:21:27.239743" elapsed="0.000000"/>
+</kw>
+<kw name="Click product link" owner="home_page">
+<arg>Ceramic Mug</arg>
+<status status="NOT RUN" start="2025-10-01T20:21:27.239743" elapsed="0.000998"/>
+</kw>
+<kw name="Select color gray" owner="product_page">
+<status status="NOT RUN" start="2025-10-01T20:21:27.240741" elapsed="0.000000"/>
+</kw>
+<kw name="Select quantity" owner="product_page">
+<arg>3</arg>
+<status status="NOT RUN" start="2025-10-01T20:21:27.240741" elapsed="0.000000"/>
+</kw>
+<kw name="Open cart" owner="cart_page">
+<status status="NOT RUN" start="2025-10-01T20:21:27.241767" elapsed="0.000000"/>
+</kw>
+<kw name="Tick all product checkboxes" owner="cart_page">
+<status status="NOT RUN" start="2025-10-01T20:21:27.241767" elapsed="0.000000"/>
+</kw>
+<kw name="Read cart page price panel" owner="cart_page">
+<var>${subtotal}</var>
+<var>${shipping}</var>
+<var>${vat}</var>
+<status status="NOT RUN" start="2025-10-01T20:21:27.242764" elapsed="0.000000"/>
+</kw>
+<kw name="Proceed to checkout" owner="cart_page">
+<status status="NOT RUN" start="2025-10-01T20:21:27.242764" elapsed="0.000000"/>
+</kw>
+<kw name="Read checkout page price panel" owner="checkout_page">
+<var>${total}</var>
+<status status="NOT RUN" start="2025-10-01T20:21:27.243733" elapsed="0.000000"/>
+</kw>
+<kw name="Validate total" owner="utils">
+<arg>${total}</arg>
+<arg>${shipping}</arg>
+<arg>${vat}</arg>
+<arg>${subtotal}</arg>
+<status status="NOT RUN" start="2025-10-01T20:21:27.243733" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3sec</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-10-01T20:21:27.243733" elapsed="0.000000"/>
+</kw>
+<kw name="Close app" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-01T20:21:27.244730" elapsed="2.132857"/>
+</kw>
+<status status="PASS" start="2025-10-01T20:21:27.244730" elapsed="2.132857"/>
+</kw>
+<status status="SKIP" start="2025-10-01T20:21:25.487152" elapsed="3.890435">Skipped for now</status>
+</test>
+<status status="PASS" start="2025-10-01T20:21:17.592559" elapsed="11.787019"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Checkout Mug" id="s1" pass="1" fail="0" skip="1">Checkout Mug</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

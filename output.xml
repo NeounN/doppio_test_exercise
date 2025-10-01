@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-01T16:32:31.274077" rpa="false" schemaversion="5">
+<suite id="s1" name="Checkout Mug" source="c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\tests\checkout_mug.robot">
+<test id="s1-t1" name="Test Case - 2" line="33">
+<kw name="Open app" owner="common" type="SETUP">
+<kw name="Open Browser">
+<msg time="2025-10-01T16:32:31.371778" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<status status="FAIL" start="2025-10-01T16:32:31.371633" elapsed="0.001472">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-10-01T16:32:31.373624" elapsed="0.000180"/>
+</kw>
+<kw name="Wait Until Page Contains Element">
+<arg>id=nav-search-input</arg>
+<status status="NOT RUN" start="2025-10-01T16:32:31.374038" elapsed="0.000100"/>
+</kw>
+<status status="FAIL" start="2025-10-01T16:32:31.369915" elapsed="0.004416">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Close app" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers">
+<msg time="2025-10-01T16:32:31.377445" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2025-10-01T16:32:31.377287" elapsed="0.000329">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<status status="FAIL" start="2025-10-01T16:32:31.375126" elapsed="0.002684">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<status status="FAIL" start="2025-10-01T16:32:31.368999" elapsed="0.009190">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<status status="FAIL" start="2025-10-01T16:32:31.279093" elapsed="0.100779"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Checkout Mug" id="s1" pass="0" fail="1" skip="0">Checkout Mug</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-01T16:32:31.304666" level="ERROR">Error in file 'c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\resources\common.resource' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Non\Documents\practiceTest\doppio_tests
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Non\AppData\Local\Programs\Python\Python313
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+<msg time="2025-10-01T16:32:31.311709" level="ERROR">Error in file 'c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\resources\utils.resource' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Non\Documents\practiceTest\doppio_tests
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Non\AppData\Local\Programs\Python\Python313
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+<msg time="2025-10-01T16:32:31.317081" level="ERROR">Error in file 'c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\pages\login_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Non\Documents\practiceTest\doppio_tests
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Non\AppData\Local\Programs\Python\Python313
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+<msg time="2025-10-01T16:32:31.330593" level="ERROR">Error in file 'c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\pages\home_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Non\Documents\practiceTest\doppio_tests
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Non\AppData\Local\Programs\Python\Python313
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+<msg time="2025-10-01T16:32:31.338228" level="ERROR">Error in file 'c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\pages\product_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Non\Documents\practiceTest\doppio_tests
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Non\AppData\Local\Programs\Python\Python313
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+<msg time="2025-10-01T16:32:31.352005" level="ERROR">Error in file 'c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\pages\cart_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Non\Documents\practiceTest\doppio_tests
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Non\AppData\Local\Programs\Python\Python313
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+<msg time="2025-10-01T16:32:31.366160" level="ERROR">Error in file 'c:\Users\Non\Documents\practiceTest\doppio_tests\doppio_test\pages\checkout_page.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Non\Documents\practiceTest\doppio_tests
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Non\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Non\AppData\Local\Programs\Python\Python313
+  C:\Users\Non\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+</errors>
+</robot>
