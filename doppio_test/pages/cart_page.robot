@@ -7,17 +7,15 @@ Resource    ../resources/utils.resource
 *** Variables ***
 ${CART_ICON_NAV}    css=[data-testid="nav-cart"]
 
-# ${PROCEED_BTN}    dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('#btn-proceed')
-${PROCEED_BTN}     dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="cart-proceed"]')
+${PROCEED_BTN}                dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="cart-proceed"]')
+${PLACE_ORDER_BTN}            dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="checkout-place-order"]')
 
-${SELECT_ALL_CHECKBOX}    dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div0-label0-input0"]')
-${PRODUCT33_MUG_CHECKBOX}    dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('#chk-select-33')
+${SELECT_ALL_CHECKBOX}        dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div0-label0-input0"]')
+${PRODUCT33_MUG_CHECKBOX}     dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('#chk-select-33')
 
-${PLACE_ORDER_BTN}    dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="checkout-place-order"]')
-
-${SUBTOTAL_TXT}    dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div1-span1"]')
-${SHIPPING_TXT}       dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div2-span1"]')
-${VAT_TXT}            dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div3-span1"]')
+${SUBTOTAL_TXT}               dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div1-span1"]')
+${SHIPPING_TXT}               dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div2-span1"]')
+${VAT_TXT}                    dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div3-span1"]')
 # ${DISCOUNT_TXT}    locator_here
 
 *** Keywords ***
@@ -46,7 +44,6 @@ Read cart page price panel
     ${vat_txt}=         Get Text    ${VAT_TXT}
     # ${discount_txt}     Get Text    ${DISCOUNT_TXT}
 
-
     ${subtotal}=        THB Text To Number    ${subtotal_txt}
     ${shipping}=        THB Text To Number    ${shipping_txt}
     ${vat}=             THB Text To Number    ${vat_txt}
@@ -54,10 +51,6 @@ Read cart page price panel
     
     Log To Console    ${EMPTY}
     Log To Console    Get value from cart
-    # Log To Console    subtotal_txt is: ${subtotal_txt}
-    # Log To Console    shipping_txt is: ${SHIPPING_TXT}
-    # Log To Console    vat_txt is: ${vat_txt}
-    # Log To Console    discount_txt is: ${discount_txt}
     Log To Console    1 - Subtotal is number: ${subtotal}
     Log To Console    2 - shipping is number: ${shipping}
     Log To Console    3 - vat is number: ${vat}

@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    OperatingSystem
+# Library    OperatingSystem
 
 *** Variables ***
 ${SEARCH_INPUT}    css=[data-testid="nav-search-input"]
