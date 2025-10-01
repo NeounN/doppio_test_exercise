@@ -5,13 +5,14 @@ Resource   ../resources/utils.resource
 
 *** Variables ***
 ${QTY_INPUT_BOX}              dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-qty-input"]')
+${ADD_TO_CART_BTN}            dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-add-to-cart"]')
+${TOAST_ADD_TO_CART_SUCCESS_MESSAGE}    Added to cart
+${NAV_CART_LINK}    css=[data-testid="nav-cart"]
+
 # Idea for future improvement - receive keyword then pick color -> ${COLOR_OPTION}     dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-opt-color-${color}"]')
 ${COLOR_OPTION_WHITE}         dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-opt-color-White"]')
 ${COLOR_OPTION_GRAY}          dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-opt-color-Gray"]')
 
-${ADD_TO_CART_BTN}            dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="pd-add-to-cart"]')
-${TOAST_ADD_TO_CART_SUCCESS_MESSAGE}    Added to cart
-${NAV_CART_LINK}    css=[data-testid="nav-cart"]
 
 *** Keywords ***
 Select color white

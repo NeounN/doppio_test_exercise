@@ -36,8 +36,6 @@ Test Case - 1
     Open cart
     Remove product
 
-    # Sleep    3sec
-
 Test Case - 2
     # Skip    Skipped for now
     Sign in
@@ -63,8 +61,6 @@ Test Case - 2
     # Clear product after validating the price
     Open cart
     Remove product
-
-    # Sleep    3sec
 
 
 
