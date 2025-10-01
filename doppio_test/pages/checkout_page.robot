@@ -13,9 +13,10 @@ Read checkout page price panel
     ${total_txt}=    Get Text    ${TOTAL_TXT}
     ${total}=        THB Text To Number    ${total_txt}
 
-    Log To Console    ${EMPTY}
-    Log To Console    Get value from cart page price panel
-    Log To Console    4 - Subtotal is number: ${total}
+    # Uncomment this section to inspect Subtotal variable value
+    # Log To Console    ${EMPTY}
+    # Log To Console    Get value from cart page price panel
+    # Log To Console    4 - Subtotal is number: ${total}
 
     RETURN    ${total}
 

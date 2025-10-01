@@ -16,9 +16,5 @@ Validate total
     Should Be Equal As Numbers    ${expected_total}    ${total}    msg=❌ Total price mismatch
     Log To Console    ✅ Price calculation matches: ${subtotal} + ${shipping} + ${vat} = ${total}
 
-Should Equal Money
-    [Arguments]    ${a}    ${b}
-    # เผื่อกรณีมีทศนิยม/ปัดเศษ
-    Should Be True    abs(float(${a}) - float(${b})) < 0.01
 
 

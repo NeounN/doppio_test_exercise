@@ -1,26 +1,22 @@
 *** Settings ***
-Resource    ../resources/common.resource
-Resource    ../resources/utils.resource
-
 Resource    ../pages/login_page.robot
 Resource    ../pages/home_page.robot
 Resource    ../pages/product_page.robot
 Resource    ../pages/cart_page.robot
 Resource    ../pages/checkout_page.robot
-
+Resource    ../resources/common.resource
+Resource    ../resources/utils.resource
 
 Test Setup       Open app
 Test Teardown    Close app
 
-
 *** Test Cases ***
-
 Test Case - 1
     # Skip    Skipped for now
     Sign in
     Search the keyword        mug
     Select the autocomplete product
-    Select color gray
+    Select color white
     Select quantity           3
     Add product to cart
     Open cart
@@ -35,6 +31,10 @@ Test Case - 1
     # Read cart page price panel and store in ${total} variables
     ${total}=    Read checkout page price panel
     Validate total    ${total}    ${shipping}    ${vat}    ${subtotal}
+    
+    # Clear product after validating the price
+    Open cart
+    Remove product
 
     # Sleep    3sec
 
@@ -43,14 +43,13 @@ Test Case - 2
     Sign in
     Search the keyword          Ceramic Mug
     Click search button
-    Sleep    2s
     Click product link          Ceramic Mug
-
-    Select color gray
+    Select color white
     Select quantity           3
     Add product to cart
     Open cart
 
+    # Tick product checkbox
     Tick all product checkboxes
 
     # In Cart pageRead cart page, Read price panel and store in ${subtotal}, ${shipping}, ${vat} variables
@@ -60,11 +59,12 @@ Test Case - 2
     # Read cart page price panel and store in ${total} variables
     ${total}=    Read checkout page price panel
     Validate total    ${total}    ${shipping}    ${vat}    ${subtotal}
+    
+    # Clear product after validating the price
+    Open cart
+    Remove product
 
-
-
-
-    Sleep    3sec
+    # Sleep    3sec
 
 
 

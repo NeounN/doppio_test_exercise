@@ -1,7 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    OperatingSystem
-Library    XML
 Resource    ../resources/utils.resource
 
 *** Variables ***
@@ -11,12 +9,16 @@ ${PROCEED_BTN}                dom:document.querySelector('[data-testid="shadow-h
 ${PLACE_ORDER_BTN}            dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-testid="checkout-place-order"]')
 
 ${SELECT_ALL_CHECKBOX}        dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div0-label0-input0"]')
-${PRODUCT33_MUG_CHECKBOX}     dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('#chk-select-33')
+${PRODUCT_WHITE_MUG_CHECKBOX}     dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('#chk-select-33')
 
 ${SUBTOTAL_TXT}               dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div1-span1"]')
 ${SHIPPING_TXT}               dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div2-span1"]')
 ${VAT_TXT}                    dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-aside1-section0-div3-span1"]')
 # ${DISCOUNT_TXT}    locator_here
+
+${REMOVE_BTN}                 dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div1-div0-div0-div1-button2"]')
+${CONFIRM_REMOVE_BTN}         dom:document.querySelector('[data-testid="shadow-host"]').shadowRoot.querySelector('[data-cart="cart-div0-div1-div2-div0-div2-button1"]') 
+
 
 *** Keywords ***
 Open cart
@@ -24,7 +26,7 @@ Open cart
     Wait Until Page Contains Element   ${PROCEED_BTN}    3s
 
 Tick product checkbox
-    Click Element    ${PRODUCT33_MUG_CHECKBOX}
+    Click Element    ${PRODUCT_WHITE_MUG_CHECKBOX}
     Wait Until Page Contains Element   ${PROCEED_BTN}    3s
 
 Tick all product checkboxes
@@ -49,10 +51,18 @@ Read cart page price panel
     ${vat}=             THB Text To Number    ${vat_txt}
     # ${discount}=        THB Text To Number    ${discount_txt}
     
-    Log To Console    ${EMPTY}
-    Log To Console    Get value from cart
-    Log To Console    1 - Subtotal is number: ${subtotal}
-    Log To Console    2 - shipping is number: ${shipping}
-    Log To Console    3 - vat is number: ${vat}
+    # Uncomment this section to view the value of each variable
+    # Log To Console    ${EMPTY}
+    # Log To Console    Get value from cart
+    # Log To Console    1 - Subtotal is number: ${subtotal}
+    # Log To Console    2 - shipping is number: ${shipping}
+    # Log To Console    3 - vat is number: ${vat}
 
     RETURN    ${subtotal}    ${shipping}    ${vat}
+
+Remove product
+    Click Element    ${REMOVE_BTN}
+    Wait Until Page Contains Element   ${CONFIRM_REMOVE_BTN}    3s
+    Click Element    ${CONFIRM_REMOVE_BTN}
+    Wait Until Page Contains    Removed from cart    3s
+    

@@ -1,0 +1,19 @@
+==============================================================================
+Checkout Mug                                                                  
+==============================================================================
+Test Case - 1                                                         
+Get value from cart page price panel
+4 - Subtotal is number: 323.0
+? Price calculation matches: 255.0 + 50.0 + 18.0 = 323.0
+| PASS |
+------------------------------------------------------------------------------
+Test Case - 2                                                         
+Get value from cart page price panel
+4 - Subtotal is number: 323.0
+? Price calculation matches: 255.0 + 50.0 + 18.0 = 323.0
+| PASS |
+------------------------------------------------------------------------------
+Checkout Mug                                                          | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  C:\Users\Non\Documents\GitHub\doppio_test_exercise\doppio_test\pabot_results\0\output.xml
